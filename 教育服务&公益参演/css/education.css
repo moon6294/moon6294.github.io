@@ -141,7 +141,7 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   overflow: hidden;
   text-align: left;
-  min-height: 550px;
+  height: 550px;
 }
 
 .media-image {

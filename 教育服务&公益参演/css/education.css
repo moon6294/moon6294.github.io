@@ -141,6 +141,7 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   overflow: hidden;
   text-align: left;
+  min-height: 550px;
 }
 
 .media-image {
@@ -157,9 +158,31 @@ body {
   border-radius: 5px;
 }
 
+/* 修改媒体列表区域 */
 .media-list {
   flex: 1;
   padding: 30px;
+  max-height: 500px; /* 设置固定高度 */
+  overflow-y: auto;  /* 添加垂直滚动条 */
+}
+
+/* 自定义滚动条样式 */
+.media-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.media-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.media-list::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.media-list::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
 }
 
 .media-list h2 {
@@ -267,5 +290,14 @@ body {
 
   .education-grid {
       grid-template-columns: 1fr;
+  }
+
+  .media-list {
+    max-height: 400px; /* 在小屏幕上减小高度 */
+    padding: 20px;
+  }
+  
+  .media-container {
+    min-height: auto; /* 在小屏幕上取消固定高度 */
   }
 }
